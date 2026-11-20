@@ -1,0 +1,6 @@
+node_modules/
+skills/klap-base/motor/bin/
+__pycache__/
+*.pyc
+.DS_Store
+*.part

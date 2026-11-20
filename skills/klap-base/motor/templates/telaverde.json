@@ -1,0 +1,59 @@
+{
+  "name": "Tela verde",
+  "about": "Você recortada na frente do vídeo que está comentando, título forte no gancho e legenda orgânica em negrito.",
+  "sceneMax": 3.2,
+  "sceneMin": 1.2,
+  "intro": [
+    "full"
+  ],
+  "pattern": [
+    "green",
+    "green",
+    "full"
+  ],
+  "captionMode": "chunk",
+  "captionMaxWords": 4,
+  "captionMaxChars": 20,
+  "needsCutout": true,
+  "titleSeconds": 3.2,
+  "style": {
+    "font": "Montserrat",
+    "captionSize": 62,
+    "captionWeight": 800,
+    "captionColor": "#ffffff",
+    "accent": "#ffe14d",
+    "captionY": 0.62,
+    "captionBox": false,
+    "titleFont": "Montserrat",
+    "titleSize": 70,
+    "titleY": 0.13,
+    "titleStyle": "outline",
+    "cutoutScale": 0.8,
+    "cutoutX": 0.5,
+    "bgDim": 0.18,
+    "kenburns": true,
+    "captionAnim": "box",
+    "boxTextColor": "#111",
+    "stickerOutline": true,
+    "progress": true,
+    "grain": 0.05,
+    "vignette": 0.25,
+    "ctaColor": "#ff3d6e",
+    "titleHighlightColor": "#ffe14d"
+  },
+  "transitions": [
+    "slide",
+    "punch",
+    "zoomblur"
+  ],
+  "emojiPos": {
+    "green": [
+      0.82,
+      0.2
+    ],
+    "full": [
+      0.82,
+      0.24
+    ]
+  }
+}

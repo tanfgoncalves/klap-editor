@@ -1,0 +1,14 @@
+{
+  "name": "klap-editor-motor",
+  "private": true,
+  "description": "Motor Remotion do KLAP Editor (templates de reels). Renderizado pelo klap.py.",
+  "scripts": {
+    "studio": "remotion studio src/index.ts"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.539",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "remotion": "4.0.539"
+  }
+}

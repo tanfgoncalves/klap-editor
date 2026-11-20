@@ -1,0 +1,57 @@
+{
+  "name": "Yap elaborado",
+  "about": "Você em tela cheia com cortes e zoom, uma palavra por vez ao lado do rosto e título em cima da cabeça.",
+  "sceneMax": 2.6,
+  "sceneMin": 1.0,
+  "intro": [
+    "full"
+  ],
+  "pattern": [
+    "full"
+  ],
+  "zoomPattern": [
+    1.0,
+    1.16,
+    1.04,
+    1.24
+  ],
+  "captionMode": "word",
+  "titleSeconds": 3.0,
+  "style": {
+    "font": "Inter Tight",
+    "captionSize": 112,
+    "captionWeight": 900,
+    "captionColor": "#ffffff",
+    "accent": "#ffd400",
+    "captionPlacement": "face-side",
+    "captionY": 0.6,
+    "titleFont": "Inter Tight",
+    "titleSize": 76,
+    "titleStyle": "above-head",
+    "titleY": 0.1,
+    "kenburns": false,
+    "captionAnim": "word",
+    "vignette": 0.3,
+    "grain": 0.05,
+    "progress": true,
+    "ctaColor": "#ffd400",
+    "ctaTextColor": "#111",
+    "titleHighlightColor": "#ffd400"
+  },
+  "transitions": [
+    "punch",
+    "cut",
+    "punch",
+    "zoomblur"
+  ],
+  "emojiPos": {
+    "full": [
+      0.8,
+      0.17
+    ],
+    "media": [
+      0.8,
+      0.2
+    ]
+  }
+}

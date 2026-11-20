@@ -1,0 +1,1043 @@
+{
+  "template": "teladividida",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "duration": 28.6,
+  "speaker": "assets/cut.mp4",
+  "cutout": null,
+  "face": {
+    "h": 0.19593395292758942,
+    "w": 0.34832701086997986,
+    "x": 0.3310205042362213,
+    "y": 0.2645331770181656
+  },
+  "title": {
+    "text": "O erro de 90% dos psicólogos",
+    "start": 0.0,
+    "end": 3.0,
+    "highlight": ""
+  },
+  "style": {
+    "font": "Inter Tight",
+    "captionSize": 60,
+    "captionWeight": 700,
+    "captionColor": "#16130f",
+    "accent": "#b3123a",
+    "captionY": 0.72,
+    "splitCaptionY": 0.5,
+    "captionBox": true,
+    "captionBoxColor": "#ffffff",
+    "titleFont": "Playfair Display",
+    "titleItalic": true,
+    "titleSize": 84,
+    "titleY": 0.14,
+    "titleStyle": "card",
+    "keywordFont": "Playfair Display",
+    "keywordItalic": true,
+    "keywordSize": 132,
+    "keywordY": 0.2,
+    "keywordColor": "#ffffff",
+    "kenburns": true,
+    "captionAnim": "pill",
+    "splitInset": 34,
+    "vignette": 0.22,
+    "grain": 0.035,
+    "progress": false,
+    "ctaColor": "#b3123a",
+    "captionMode": "chunk"
+  },
+  "media": {
+    "m1": {
+      "src": "assets/media/m1.jpg",
+      "kind": "image",
+      "dur": 0,
+      "name": "busca_1.jpg",
+      "w": 1024,
+      "h": 684,
+      "credit": "Woman checking cell phone working | ? (CC0 1.0) via rawpixel | https://www.rawpixel.com/image/11515755/photo-image-face-person-phone"
+    },
+    "m2": {
+      "src": "assets/media/m2.jpg",
+      "kind": "image",
+      "dur": 0,
+      "name": "busca_2.jpg",
+      "w": 1024,
+      "h": 684,
+      "credit": "Free open calendar pen photo | ? (CC0 1.0) via rawpixel | https://www.rawpixel.com/image/5912649/image-paper-book-public-domain"
+    },
+    "m3": {
+      "src": "assets/media/m3.jpg",
+      "kind": "image",
+      "dur": 0,
+      "name": "busca_3.jpg",
+      "w": 960,
+      "h": 640,
+      "credit": "Money Coins | Negative Space (CC0 1.0) via stocksnap | https://stocksnap.io/photo/money-coins-SDM03P88BO"
+    },
+    "m4": {
+      "src": "assets/media/m4.jpg",
+      "kind": "image",
+      "dur": 0,
+      "name": "busca_5.jpg",
+      "w": 1440,
+      "h": 960,
+      "credit": "Occupational therapist helping a client create a job resume to send out to future employers | Mangionekd (BY-SA 4.0) via wikimedia | https://commons.wikimedia.org/w/index.php?curid=50584483"
+    }
+  },
+  "scenes": [
+    {
+      "id": 1,
+      "start": 0.0,
+      "end": 2.345,
+      "layout": "full",
+      "text": "Esse vídeo vai ser bem direto e específico.",
+      "transition": "cut"
+    },
+    {
+      "id": 2,
+      "start": 2.345,
+      "end": 6.079,
+      "layout": "split",
+      "text": "A primeira opção que eu tenho aqui para te mostrar é o modelo de negócio horizontal.",
+      "media": "m1",
+      "mediaStart": 0.0,
+      "transition": "slide"
+    },
+    {
+      "id": 3,
+      "start": 6.079,
+      "end": 9.662,
+      "layout": "full",
+      "text": "Quase que 90% dos psicólogos que colocam a sua prática no digital,",
+      "keyword": "90%",
+      "transition": "flash"
+    },
+    {
+      "id": 4,
+      "start": 9.662,
+      "end": 12.112,
+      "layout": "split",
+      "text": "eles usam o modelo de negócio horizontal.",
+      "media": "m4",
+      "mediaStart": 0.0,
+      "transition": "slide"
+    },
+    {
+      "id": 5,
+      "start": 12.112,
+      "end": 14.822,
+      "layout": "split",
+      "text": "Mas o que é o modelo de negócio horizontal?",
+      "media": "m4",
+      "mediaStart": 0,
+      "transition": "slide"
+    },
+    {
+      "id": 6,
+      "start": 14.822,
+      "end": 18.24,
+      "layout": "full",
+      "text": "Normalmente esse psicólogo, ele usa apenas um serviço para",
+      "keyword": "um serviço",
+      "transition": "flash"
+    },
+    {
+      "id": 7,
+      "start": 18.24,
+      "end": 21.244,
+      "layout": "split",
+      "text": "divulgar nas redes sociais e que na grande maioria",
+      "media": "m1",
+      "mediaStart": 0.0,
+      "transition": "slide"
+    },
+    {
+      "id": 8,
+      "start": 21.244,
+      "end": 23.221,
+      "layout": "full",
+      "text": "é a sessão de terapia individual.",
+      "keyword": "terapia individual",
+      "transition": "slide"
+    },
+    {
+      "id": 9,
+      "start": 23.221,
+      "end": 25.09,
+      "layout": "split",
+      "text": "Então normalmente esse psicólogo, ele separa ali 6,",
+      "media": "m2",
+      "mediaStart": 0.0,
+      "transition": "flash"
+    },
+    {
+      "id": 10,
+      "start": 25.09,
+      "end": 27.298,
+      "layout": "split",
+      "text": "10 horas por dia para prestar esse serviço,",
+      "media": "m3",
+      "mediaStart": 0.0,
+      "transition": "slide"
+    },
+    {
+      "id": 11,
+      "start": 27.298,
+      "end": 28.6,
+      "layout": "full",
+      "text": "atende 6 ou 10 horas.",
+      "keyword": "10 horas",
+      "transition": "slide"
+    }
+  ],
+  "captions": [
+    {
+      "start": 0.003,
+      "words": [
+        {
+          "w": "Esse",
+          "s": 0.003,
+          "e": 0.045
+        },
+        {
+          "w": "vídeo",
+          "s": 0.003,
+          "e": 0.195
+        },
+        {
+          "w": "vai",
+          "s": 0.195,
+          "e": 0.42
+        }
+      ],
+      "end": 0.42
+    },
+    {
+      "start": 0.42,
+      "words": [
+        {
+          "w": "ser",
+          "s": 0.42,
+          "e": 0.645
+        },
+        {
+          "w": "bem",
+          "s": 0.645,
+          "e": 0.87
+        },
+        {
+          "w": "direto",
+          "s": 0.87,
+          "e": 1.32
+        }
+      ],
+      "end": 1.32
+    },
+    {
+      "start": 1.32,
+      "words": [
+        {
+          "w": "e",
+          "s": 1.32,
+          "e": 1.395
+        },
+        {
+          "w": "específico.",
+          "s": 1.395,
+          "e": 2.217
+        }
+      ],
+      "end": 2.385
+    },
+    {
+      "start": 2.385,
+      "words": [
+        {
+          "w": "A",
+          "s": 2.385,
+          "e": 2.427
+        },
+        {
+          "w": "primeira",
+          "s": 2.385,
+          "e": 2.668
+        },
+        {
+          "w": "opção",
+          "s": 2.668,
+          "e": 2.935
+        }
+      ],
+      "end": 2.935
+    },
+    {
+      "start": 2.935,
+      "words": [
+        {
+          "w": "que",
+          "s": 2.935,
+          "e": 3.093
+        },
+        {
+          "w": "eu",
+          "s": 3.093,
+          "e": 3.21
+        },
+        {
+          "w": "tenho",
+          "s": 3.21,
+          "e": 3.468
+        }
+      ],
+      "end": 3.468
+    },
+    {
+      "start": 3.468,
+      "words": [
+        {
+          "w": "aqui",
+          "s": 3.468,
+          "e": 3.685
+        },
+        {
+          "w": "para",
+          "s": 3.685,
+          "e": 3.902
+        },
+        {
+          "w": "te",
+          "s": 3.902,
+          "e": 4.018
+        }
+      ],
+      "end": 4.018
+    },
+    {
+      "start": 4.018,
+      "words": [
+        {
+          "w": "mostrar",
+          "s": 4.018,
+          "e": 4.316
+        },
+        {
+          "w": "é",
+          "s": 4.316,
+          "e": 4.356
+        },
+        {
+          "w": "o",
+          "s": 4.327,
+          "e": 4.377
+        }
+      ],
+      "end": 4.377
+    },
+    {
+      "start": 4.377,
+      "words": [
+        {
+          "w": "modelo",
+          "s": 4.377,
+          "e": 4.702
+        },
+        {
+          "w": "de",
+          "s": 4.702,
+          "e": 4.811
+        },
+        {
+          "w": "negócio",
+          "s": 4.811,
+          "e": 5.186
+        }
+      ],
+      "end": 5.186
+    },
+    {
+      "start": 5.186,
+      "words": [
+        {
+          "w": "horizontal.",
+          "s": 5.186,
+          "e": 5.961
+        }
+      ],
+      "end": 6.119
+    },
+    {
+      "start": 6.119,
+      "words": [
+        {
+          "w": "Quase",
+          "s": 6.119,
+          "e": 6.161
+        },
+        {
+          "w": "que",
+          "s": 6.119,
+          "e": 6.161
+        },
+        {
+          "w": "90%",
+          "s": 6.119,
+          "e": 6.427
+        }
+      ],
+      "end": 6.427
+    },
+    {
+      "start": 6.427,
+      "words": [
+        {
+          "w": "dos",
+          "s": 6.427,
+          "e": 6.644
+        },
+        {
+          "w": "psicólogos",
+          "s": 6.644,
+          "e": 7.352
+        },
+        {
+          "w": "que",
+          "s": 7.352,
+          "e": 7.561
+        }
+      ],
+      "end": 7.561
+    },
+    {
+      "start": 7.561,
+      "words": [
+        {
+          "w": "colocam",
+          "s": 7.561,
+          "e": 8.069
+        },
+        {
+          "w": "a",
+          "s": 8.069,
+          "e": 8.127
+        },
+        {
+          "w": "sua",
+          "s": 8.127,
+          "e": 8.352
+        }
+      ],
+      "end": 8.352
+    },
+    {
+      "start": 8.352,
+      "words": [
+        {
+          "w": "prática",
+          "s": 8.352,
+          "e": 8.852
+        },
+        {
+          "w": "no",
+          "s": 8.852,
+          "e": 8.994
+        }
+      ],
+      "end": 8.994
+    },
+    {
+      "start": 8.994,
+      "words": [
+        {
+          "w": "digital,",
+          "s": 8.994,
+          "e": 9.702
+        }
+      ],
+      "end": 9.702
+    },
+    {
+      "start": 9.702,
+      "words": [
+        {
+          "w": "eles",
+          "s": 9.702,
+          "e": 9.952
+        },
+        {
+          "w": "usam",
+          "s": 9.952,
+          "e": 10.194
+        },
+        {
+          "w": "o",
+          "s": 10.194,
+          "e": 10.327
+        }
+      ],
+      "end": 10.327
+    },
+    {
+      "start": 10.327,
+      "words": [
+        {
+          "w": "modelo",
+          "s": 10.327,
+          "e": 10.636
+        },
+        {
+          "w": "de",
+          "s": 10.636,
+          "e": 10.769
+        },
+        {
+          "w": "negócio",
+          "s": 10.769,
+          "e": 11.202
+        }
+      ],
+      "end": 11.202
+    },
+    {
+      "start": 11.202,
+      "words": [
+        {
+          "w": "horizontal.",
+          "s": 11.202,
+          "e": 12.052
+        }
+      ],
+      "end": 12.152
+    },
+    {
+      "start": 12.152,
+      "words": [
+        {
+          "w": "Mas",
+          "s": 12.152,
+          "e": 12.328
+        },
+        {
+          "w": "o",
+          "s": 12.328,
+          "e": 12.395
+        },
+        {
+          "w": "que",
+          "s": 12.395,
+          "e": 12.603
+        }
+      ],
+      "end": 12.603
+    },
+    {
+      "start": 12.603,
+      "words": [
+        {
+          "w": "é",
+          "s": 12.603,
+          "e": 12.67
+        },
+        {
+          "w": "o",
+          "s": 12.67,
+          "e": 12.737
+        },
+        {
+          "w": "modelo",
+          "s": 12.737,
+          "e": 13.17
+        }
+      ],
+      "end": 13.17
+    },
+    {
+      "start": 13.17,
+      "words": [
+        {
+          "w": "de",
+          "s": 13.17,
+          "e": 13.287
+        },
+        {
+          "w": "negócio",
+          "s": 13.287,
+          "e": 13.795
+        }
+      ],
+      "end": 13.795
+    },
+    {
+      "start": 13.795,
+      "words": [
+        {
+          "w": "horizontal?",
+          "s": 13.795,
+          "e": 14.703
+        }
+      ],
+      "end": 14.862
+    },
+    {
+      "start": 14.862,
+      "words": [
+        {
+          "w": "Normalmente",
+          "s": 14.862,
+          "e": 15.137
+        },
+        {
+          "w": "esse",
+          "s": 15.137,
+          "e": 15.437
+        }
+      ],
+      "end": 15.437
+    },
+    {
+      "start": 15.437,
+      "words": [
+        {
+          "w": "psicólogo,",
+          "s": 15.437,
+          "e": 16.237
+        }
+      ],
+      "end": 16.237
+    },
+    {
+      "start": 16.237,
+      "words": [
+        {
+          "w": "ele",
+          "s": 16.237,
+          "e": 16.453
+        },
+        {
+          "w": "usa",
+          "s": 16.453,
+          "e": 16.687
+        },
+        {
+          "w": "apenas",
+          "s": 16.687,
+          "e": 17.162
+        }
+      ],
+      "end": 17.162
+    },
+    {
+      "start": 17.162,
+      "words": [
+        {
+          "w": "um",
+          "s": 17.162,
+          "e": 17.278
+        },
+        {
+          "w": "serviço",
+          "s": 17.278,
+          "e": 17.795
+        },
+        {
+          "w": "para",
+          "s": 17.795,
+          "e": 18.095
+        }
+      ],
+      "end": 18.28
+    },
+    {
+      "start": 18.28,
+      "words": [
+        {
+          "w": "divulgar",
+          "s": 18.28,
+          "e": 18.562
+        },
+        {
+          "w": "nas",
+          "s": 18.562,
+          "e": 18.946
+        },
+        {
+          "w": "redes",
+          "s": 18.946,
+          "e": 19.162
+        }
+      ],
+      "end": 19.162
+    },
+    {
+      "start": 19.162,
+      "words": [
+        {
+          "w": "sociais",
+          "s": 19.162,
+          "e": 19.754
+        },
+        {
+          "w": "e",
+          "s": 19.866,
+          "e": 20.143
+        },
+        {
+          "w": "que",
+          "s": 20.143,
+          "e": 20.334
+        }
+      ],
+      "end": 20.334
+    },
+    {
+      "start": 20.334,
+      "words": [
+        {
+          "w": "na",
+          "s": 20.334,
+          "e": 20.459
+        },
+        {
+          "w": "grande",
+          "s": 20.459,
+          "e": 20.843
+        },
+        {
+          "w": "maioria",
+          "s": 20.843,
+          "e": 21.284
+        }
+      ],
+      "end": 21.284
+    },
+    {
+      "start": 21.284,
+      "words": [
+        {
+          "w": "é",
+          "s": 21.284,
+          "e": 21.376
+        },
+        {
+          "w": "a",
+          "s": 21.376,
+          "e": 21.418
+        },
+        {
+          "w": "sessão",
+          "s": 21.475,
+          "e": 21.728
+        }
+      ],
+      "end": 21.728
+    },
+    {
+      "start": 21.728,
+      "words": [
+        {
+          "w": "de",
+          "s": 21.728,
+          "e": 21.811
+        },
+        {
+          "w": "terapia",
+          "s": 21.811,
+          "e": 22.253
+        }
+      ],
+      "end": 22.253
+    },
+    {
+      "start": 22.253,
+      "words": [
+        {
+          "w": "individual.",
+          "s": 22.253,
+          "e": 23.161
+        }
+      ],
+      "end": 23.261
+    },
+    {
+      "start": 23.261,
+      "words": [
+        {
+          "w": "Então",
+          "s": 23.261,
+          "e": 23.301
+        },
+        {
+          "w": "normalmente",
+          "s": 23.261,
+          "e": 23.422
+        }
+      ],
+      "end": 23.422
+    },
+    {
+      "start": 23.422,
+      "words": [
+        {
+          "w": "esse",
+          "s": 23.422,
+          "e": 23.638
+        },
+        {
+          "w": "psicólogo,",
+          "s": 23.638,
+          "e": 24.23
+        }
+      ],
+      "end": 24.23
+    },
+    {
+      "start": 24.23,
+      "words": [
+        {
+          "w": "ele",
+          "s": 24.23,
+          "e": 24.388
+        },
+        {
+          "w": "separa",
+          "s": 24.388,
+          "e": 24.697
+        },
+        {
+          "w": "ali",
+          "s": 24.697,
+          "e": 24.863
+        }
+      ],
+      "end": 24.863
+    },
+    {
+      "start": 24.863,
+      "words": [
+        {
+          "w": "6,",
+          "s": 24.863,
+          "e": 25.13
+        }
+      ],
+      "end": 25.13
+    },
+    {
+      "start": 25.13,
+      "words": [
+        {
+          "w": "10",
+          "s": 25.13,
+          "e": 25.613
+        },
+        {
+          "w": "horas",
+          "s": 25.613,
+          "e": 25.722
+        },
+        {
+          "w": "por",
+          "s": 25.722,
+          "e": 25.88
+        }
+      ],
+      "end": 25.88
+    },
+    {
+      "start": 25.88,
+      "words": [
+        {
+          "w": "dia",
+          "s": 25.88,
+          "e": 26.038
+        },
+        {
+          "w": "para",
+          "s": 26.038,
+          "e": 26.305
+        },
+        {
+          "w": "prestar",
+          "s": 26.305,
+          "e": 26.638
+        }
+      ],
+      "end": 26.638
+    },
+    {
+      "start": 26.638,
+      "words": [
+        {
+          "w": "esse",
+          "s": 26.638,
+          "e": 26.847
+        },
+        {
+          "w": "serviço,",
+          "s": 26.847,
+          "e": 27.338
+        }
+      ],
+      "end": 27.338
+    },
+    {
+      "start": 27.338,
+      "words": [
+        {
+          "w": "atende",
+          "s": 27.338,
+          "e": 27.535
+        },
+        {
+          "w": "6",
+          "s": 27.535,
+          "e": 27.624
+        },
+        {
+          "w": "ou",
+          "s": 27.624,
+          "e": 27.733
+        }
+      ],
+      "end": 27.733
+    },
+    {
+      "start": 27.733,
+      "words": [
+        {
+          "w": "10",
+          "s": 27.733,
+          "e": 28.057
+        },
+        {
+          "w": "horas.",
+          "s": 28.057,
+          "e": 28.466
+        }
+      ],
+      "end": 28.6
+    }
+  ],
+  "overlays": [
+    {
+      "type": "emoji",
+      "emoji": "🧑‍⚕️",
+      "start": 14.972,
+      "end": 16.422,
+      "x": 0.84,
+      "y": 0.32,
+      "size": 230
+    },
+    {
+      "type": "emoji",
+      "emoji": "⏰",
+      "start": 27.448,
+      "end": 28.6,
+      "x": 0.84,
+      "y": 0.32,
+      "size": 230
+    }
+  ],
+  "cta": {
+    "text": "Comenta VERTICAL",
+    "sub": "Te mando o modelo que funciona",
+    "start": 26.0
+  },
+  "music": {
+    "src": "assets/media/musica.mp3",
+    "volume": 0.12,
+    "duck": 0.35
+  },
+  "sfx": [
+    {
+      "t": 0.0,
+      "name": "whoosh",
+      "volume": 0.35
+    },
+    {
+      "t": 2.225,
+      "name": "whoosh",
+      "volume": 0.32
+    },
+    {
+      "t": 5.959,
+      "name": "whoosh",
+      "volume": 0.32
+    },
+    {
+      "t": 6.129,
+      "name": "pop",
+      "volume": 0.25
+    },
+    {
+      "t": 9.542,
+      "name": "whoosh",
+      "volume": 0.32
+    },
+    {
+      "t": 11.992,
+      "name": "whoosh",
+      "volume": 0.32
+    },
+    {
+      "t": 14.702,
+      "name": "whoosh",
+      "volume": 0.32
+    },
+    {
+      "t": 14.872,
+      "name": "pop",
+      "volume": 0.25
+    },
+    {
+      "t": 14.972,
+      "name": "pop",
+      "volume": 0.3
+    },
+    {
+      "t": 18.12,
+      "name": "whoosh",
+      "volume": 0.32
+    },
+    {
+      "t": 21.124,
+      "name": "whoosh",
+      "volume": 0.32
+    },
+    {
+      "t": 21.294,
+      "name": "pop",
+      "volume": 0.25
+    },
+    {
+      "t": 23.101,
+      "name": "whoosh",
+      "volume": 0.32
+    },
+    {
+      "t": 24.97,
+      "name": "whoosh",
+      "volume": 0.32
+    },
+    {
+      "t": 26.0,
+      "name": "ding",
+      "volume": 0.35
+    },
+    {
+      "t": 27.178,
+      "name": "whoosh",
+      "volume": 0.32
+    },
+    {
+      "t": 27.348,
+      "name": "pop",
+      "volume": 0.25
+    },
+    {
+      "t": 27.448,
+      "name": "pop",
+      "volume": 0.3
+    }
+  ]
+}

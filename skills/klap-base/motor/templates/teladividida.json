@@ -1,0 +1,66 @@
+{
+  "name": "Tela dividida elegante",
+  "about": "Imagem em cima e você embaixo, alternando com você em tela cheia e palavras-chave grandes.",
+  "sceneMax": 3.0,
+  "sceneMin": 1.2,
+  "intro": [
+    "full"
+  ],
+  "pattern": [
+    "split",
+    "full",
+    "split",
+    "split",
+    "full"
+  ],
+  "keywords": [
+    "full"
+  ],
+  "captionMode": "chunk",
+  "captionMaxWords": 3,
+  "captionMaxChars": 18,
+  "titleSeconds": 3.0,
+  "style": {
+    "font": "Inter Tight",
+    "captionSize": 60,
+    "captionWeight": 700,
+    "captionColor": "#16130f",
+    "accent": "#b3123a",
+    "captionY": 0.72,
+    "splitCaptionY": 0.5,
+    "captionBox": true,
+    "captionBoxColor": "#ffffff",
+    "titleFont": "Playfair Display",
+    "titleItalic": true,
+    "titleSize": 84,
+    "titleY": 0.14,
+    "titleStyle": "card",
+    "keywordFont": "Playfair Display",
+    "keywordItalic": true,
+    "keywordSize": 132,
+    "keywordY": 0.2,
+    "keywordColor": "#ffffff",
+    "kenburns": true,
+    "captionAnim": "pill",
+    "splitInset": 34,
+    "vignette": 0.22,
+    "grain": 0.035,
+    "progress": false,
+    "ctaColor": "#b3123a"
+  },
+  "transitions": [
+    "slide",
+    "flash",
+    "slide"
+  ],
+  "emojiPos": {
+    "split": [
+      0.88,
+      0.5
+    ],
+    "full": [
+      0.84,
+      0.32
+    ]
+  }
+}

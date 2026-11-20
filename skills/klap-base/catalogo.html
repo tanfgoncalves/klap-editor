@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KLAP Editor</title>
+<style>
+:root{
+  --bg:#f5f1ec;--fg:#1a1512;--mut:#6f665d;--card:#fffdfa;--line:#e3dbd2;--acc:#b3123a;--acc-fg:#fff;
+  --chip:#efe8e0;--shadow:0 1px 2px rgba(40,20,10,.05),0 10px 30px rgba(40,20,10,.07);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#13100e;--fg:#f3eee8;--mut:#a59b90;--card:#1d1916;--line:#2f2924;--acc:#ff4d73;--acc-fg:#1a0a0f;--chip:#28221e;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);}}
+:root[data-theme="dark"]{--bg:#13100e;--fg:#f3eee8;--mut:#a59b90;--card:#1d1916;--line:#2f2924;--acc:#ff4d73;--acc-fg:#1a0a0f;--chip:#28221e}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Inter",system-ui,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:40px 16px 64px}
+header h1{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:700;font-size:clamp(34px,6vw,58px);line-height:1;margin:0 0 10px;letter-spacing:-.5px}
+header h1 b{color:var(--acc);font-style:normal}
+header p{color:var(--mut);max-width:640px;margin:0}
+.how{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0 34px;padding:0;list-style:none}
+.how li{background:var(--chip);border-radius:99px;padding:6px 14px;font-size:14px}
+.how li span{color:var(--acc);font-weight:700;margin-right:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.card.soon{opacity:.62}
+.mock{aspect-ratio:9/12;position:relative;overflow:hidden;background:#222}
+.mock video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tag{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,.6);color:#fff;font:600 11px system-ui;letter-spacing:1px;text-transform:uppercase;padding:4px 9px;border-radius:99px}
+.cred{margin-top:10px;font-size:12px;line-height:1.5}
+.b{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.cat{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--mut);font-weight:600}
+.b h2{margin:0;font-size:21px;font-family:"Playfair Display",Georgia,serif;font-weight:700}
+.b p{margin:0;color:var(--mut);font-size:14.5px}
+.cmd{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:14px;color:var(--fg)}
+input{width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--fg);font:inherit;font-size:14px}
+button{margin-top:auto;border:0;border-radius:12px;padding:12px;background:var(--acc);color:var(--acc-fg);font:inherit;font-weight:700;cursor:pointer}
+button:active{transform:scale(.98)}
+button[disabled]{background:var(--chip);color:var(--mut);cursor:default}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(80px);background:var(--fg);color:var(--bg);padding:10px 18px;border-radius:99px;font-size:14px;transition:transform .25s}
+.toast.on{transform:translateX(-50%) translateY(0)}
+/* mockups */
+.p{position:absolute;border-radius:50% 50% 12% 12%/60% 60% 12% 12%;background:linear-gradient(#e9c8b0,#c89c80)}
+.p::before{content:"";position:absolute;left:29%;width:42%;aspect-ratio:1;bottom:100%;margin-bottom:-6%;border-radius:50%;background:#f0d1bb;box-shadow:0 -6px 0 0 #3b2a22}
+.cap{position:absolute;left:8%;right:8%;text-align:center;font:800 15px/1.15 "Montserrat",system-ui;color:#fff;-webkit-text-stroke:3px #000;paint-order:stroke fill}
+.cap i{font-style:normal;color:#ffe14d}
+.ttl{position:absolute;left:8%;right:8%;top:8%;text-align:center;font:800 15px/1.15 system-ui;color:#fff;-webkit-text-stroke:3px #000;paint-order:stroke fill}
+.bgv{position:absolute;inset:0;background:linear-gradient(160deg,#2c5364,#203a43 45%,#0f2027)}
+.play::after{content:"▶";position:absolute;right:10%;top:12%;color:rgba(255,255,255,.35);font-size:28px}
+.top{position:absolute;left:0;right:0;top:0;height:50%;background:linear-gradient(135deg,#d9a7c7,#fffcdc)}
+.bot{position:absolute;left:0;right:0;bottom:0;height:50%;background:#cfc6bc;overflow:hidden}
+.seam{position:absolute;left:0;right:0;top:calc(50% - 1px);height:2px;background:#fff}
+.pill{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#fff;color:#1a1512;border-radius:99px;padding:3px 12px;font:700 12px system-ui;white-space:nowrap}
+.pill i{font-style:normal;color:#b3123a}
+.kw{position:absolute;left:0;right:0;text-align:center;font:italic 700 30px "Playfair Display",Georgia,serif;color:#fff;text-shadow:0 4px 14px rgba(0,0,0,.4)}
+.big{position:absolute;font:900 30px "Inter Tight",system-ui;color:#fff;-webkit-text-stroke:4px #000;paint-order:stroke fill}
+.cut{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:8px;padding:0 14%}
+.wave{height:10px;border-radius:5px;background:linear-gradient(90deg,#b3123a 0 30%,transparent 30% 36%,#b3123a 36% 62%,transparent 62% 70%,#b3123a 70% 100%)}
+.wave.raw{background:linear-gradient(90deg,#6f665d 0 22%,#3a332d 22% 34%,#6f665d 34% 50%,#3a332d 50% 58%,#6f665d 58% 80%,#3a332d 80% 88%,#6f665d 88%)}
+.lbl{font:600 11px system-ui;color:#cbbfb3;letter-spacing:1px;text-transform:uppercase}
+footer{margin-top:40px;color:var(--mut);font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>KLAP <b>Editor</b></h1>
+  <p>Escolha o modelo, copie o comando e cole no Claude junto com o vídeo bruto. Ele corta, anima, coloca sons e mídia, e te mostra a prévia pra aprovar.</p>
+</header>
+<ul class="how">
+  <li><span>1</span>Grave sem editar</li>
+  <li><span>2</span>Arraste o vídeo no chat do Claude</li>
+  <li><span>3</span>Cole o comando do modelo</li>
+  <li><span>4</span>Aprove a prévia e diga "pode fazer"</li>
+</ul>
+
+<div class="grid" id="grid"></div>
+<footer>Os comandos funcionam no Claude deste Mac (skills em ~/.claude/skills). Comece por <b>/klap</b>: ele pergunta o modelo, pede o vídeo e faz o resto.
+<div class="cred">Exemplos feitos com vídeos Creative Commons (CC BY): Caroline Caracas, Brendo Nathan e Digitalks no YouTube. Imagens e músicas livres via Openverse (créditos em cada projeto, arquivo creditos.txt). Efeitos sonoros gerados pelo próprio editor.</div></footer>
+</div>
+<div class="toast" id="toast">Copiado. Agora cole no Claude.</div>
+
+<script>
+const MODELOS = [
+  {cat:'Base', nome:'Imparável', cmd:'/klap-base', campo:null,
+   desc:'Só o corte: tira pausas e erros, acelera 1.2x sem mudar a voz e limpa o áudio.',
+   mock:`<div class="bgv" style="background:#1d1916"></div><div class="cut"><div class="lbl">antes</div><div class="wave raw"></div><div class="lbl" style="margin-top:10px">depois</div><div class="wave"></div></div>`},
+  {cat:'Comentário', nome:'Tela verde', cmd:'/telaverde', video:'exemplos/telaverde.mp4', campo:'Título do gancho',
+   desc:'Você recortada na frente do vídeo que está comentando, título forte no começo e legenda em negrito.',
+   mock:`<div class="bgv play"></div><div class="ttl">Não é possível que isso virou moda</div><div class="p" style="left:26%;right:26%;top:62%;bottom:-6%"></div><div class="cap" style="top:72%">isso aqui <i>vende</i> muito</div>`},
+  {cat:'Tela dividida', nome:'Tela dividida elegante', cmd:'/teladividida', video:'exemplos/teladividida.mp4', campo:'Título do gancho',
+   desc:'Imagem em cima e você embaixo, alternando com você em tela cheia e palavras-chave grandes.',
+   mock:`<div class="top"></div><div class="kw" style="top:16%;color:#1a1512;text-shadow:none">resultado</div><div class="bot"><div class="p" style="left:28%;right:28%;top:52%;bottom:-20%"></div></div><div class="seam"></div><div class="pill">o antes e o <i>depois</i></div>`},
+  {cat:'Opinião', nome:'Yap elaborado', cmd:'/yap', video:'exemplos/yap.mp4', campo:'Título em cima da cabeça',
+   desc:'Você em tela cheia com cortes e zoom, uma palavra por vez ao lado do rosto e título em cima da cabeça.',
+   mock:`<div class="bgv" style="background:linear-gradient(#cbbfb3,#a8998b)"></div><div class="ttl" style="top:12%">3 erros que te travam</div><div class="p" style="left:14%;right:40%;top:56%;bottom:-10%"></div><div class="big" style="right:8%;top:42%">ERRO</div>`},
+  {cat:'Narração', nome:'Bastidor com preço', cmd:'/bastidor', campo:null, soon:true,
+   desc:'Bastidor do serviço narrado, gancho em palavras grandes e o valor revelado no fim.',
+   mock:`<div class="bgv" style="background:linear-gradient(#5a3e2b,#2a1c14)"></div><div class="kw" style="top:40%;font-style:normal;font-family:system-ui;font-weight:900">R$ 600</div>`},
+  {cat:'Conversa', nome:'Conversa / POV', cmd:'/conversa', campo:null, soon:true,
+   desc:'Esquete com você nos dois papéis, título POV fixo e legenda com trilha de tensão.',
+   mock:`<div class="bgv" style="background:linear-gradient(#3d3d4e,#1f1f2b)"></div><div class="ttl">POV: o cliente pediu desconto</div><div class="p" style="left:8%;right:56%;top:58%;bottom:-8%"></div><div class="p" style="left:56%;right:8%;top:58%;bottom:-8%;filter:hue-rotate(40deg)"></div>`},
+];
+
+const grid = document.getElementById('grid');
+const toast = document.getElementById('toast');
+const esc = s => String(s).replace(/[&<>"]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
+
+for (const m of MODELOS) {
+  const el = document.createElement('article');
+  el.className = 'card' + (m.soon ? ' soon' : '');
+  const vis = m.video ? `<video src="${m.video}" autoplay muted loop playsinline preload="metadata"></video><span class="tag">exemplo real</span>` : m.mock;
+  el.innerHTML = `<div class="mock">${vis}</div>
+    <div class="b"><div class="cat">${esc(m.cat)}</div><h2>${esc(m.nome)}</h2><p>${esc(m.desc)}</p>
+    <div class="cmd">${esc(m.cmd)}</div>
+    ${m.campo && !m.soon ? `<input type="text" placeholder="${esc(m.campo)} (opcional)">` : ''}
+    <button ${m.soon ? 'disabled' : ''}>${m.soon ? 'Em breve' : 'Copiar comando'}</button></div>`;
+  const btn = el.querySelector('button');
+  const inp = el.querySelector('input');
+  if (!m.soon) btn.addEventListener('click', async () => {
+    const t = inp && inp.value.trim();
+    const texto = t ? `${m.cmd} quero que o título seja: ${t}` : m.cmd;
+    try { await navigator.clipboard.writeText(texto); }
+    catch (e) { const ta = document.createElement('textarea'); ta.value = texto; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); }
+    toast.classList.add('on'); setTimeout(() => toast.classList.remove('on'), 1800);
+  });
+  grid.appendChild(el);
+}
+</script>
+</body>
+</html>
