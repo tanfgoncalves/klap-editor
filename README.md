@@ -33,7 +33,7 @@ Requisitos: **macOS** (Apple Silicon recomendado), [Claude Code](https://claude.
 e as Command Line Tools (`xcode-select --install`).
 
 ```bash
-git clone https://github.com/<seu-usuario>/klap-editor.git ~/klap-editor
+git clone https://github.com/tanfgoncalves/klap-editor.git ~/klap-editor
 cd ~/klap-editor
 ./install.sh
 ```
